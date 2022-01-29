@@ -98,25 +98,36 @@ li.nav-item {
 }
 
 ul.nav-items.responsive {
-  position: absolute;
   display: block;
-  font-size: 1.5rem;
-  box-shadow: 5px 10px 20px -5px rgb(194, 194, 194);
+  position: absolute;
   top: 151px;
-  white-space: normal;
   width: 30%;
+  font-size: 1.5rem;
   text-align: center;
-
+  box-shadow: 5px 10px 20px -5px rgb(194, 194, 194);
+  white-space: normal;
+  border: 1px grey;
+  border-style: none solid solid solid;
   animation: fadeIn 300ms ease-in-out forwards;
+}
+
+@media screen and (min-width: 1181px) {
+  ul.nav-items.responsive {
+    display: none;
+  }
 }
 
 ul.nav-items.responsive li.nav-item {
   display: block;
+  background-color: rgb(255, 237, 176);
   margin: 0;
-  padding: 3px;
+  padding: 5px;
   z-index: 1;
-  background-color: white;
-  border-style: none solid dotted solid;
+  border-style: none none dotted none;
+}
+
+ul.nav-items.responsive li.nav-item#contact {
+  border-style: none;
 }
 
 @media screen and (max-width: 650px) {

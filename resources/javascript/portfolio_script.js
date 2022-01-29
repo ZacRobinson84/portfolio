@@ -6,3 +6,10 @@ function dropMenu() {
     x.className = "nav-items";
   }
 }
+
+function closeDropMenu() {
+  var x = document.getElementById("dropNav");
+  x.className = "nav-items";
+}
+
+window.addEventListener("resize", closeDropMenu);
