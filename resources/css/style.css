@@ -1,59 +1,56 @@
-body {
-  font-size: 16px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#logo {
-  font-family: "Creepster", cursive;
-  font-size: 4rem;
-  letter-spacing: 3px;
-  color: white;
-  text-shadow: -5px -5px black;
-  background-color: red;
-  width: 60%;
-  margin: auto;
-}
+/* Navigation Bar */
 
 nav {
-  position: relative;
-  background-color: black;
-  margin: auto;
-  padding: 2px;
-
-  width: 800px;
-  text-align: right;
-  transform: rotate(-3deg);
+  font-family: "Mochiy Pop P One", sans-serif;
+  background-color: lightgrey;
+  display: grid;
+  grid-template-columns: 33% 66%;
+  justify-items: center;
+  align-items: end;
+  width: 55%;
+  margin: 50px auto;
+  border: 1px grey;
+  border-style: solid solid none solid;
 }
 
-.navigation-items {
-  list-style-type: none;
-}
-
-.navigation-item {
+h1.logo {
   display: inline;
-  font-family: "Permanent Marker", cursive;
-  font-size: 1.5rem;
-  color: white;
-  margin: 10px 20px;
+  margin: 5px 10px 0 10px;
+  justify-self: start;
 }
 
-.menu-icon {
-  display: none;
+ul.nav-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-self: end;
+  white-space: nowrap;
 }
 
-.menu-icon-bars {
-  background-color: white;
-  width: 25px;
+li.nav-item {
+  display: inline;
+  background-color: rgb(231, 231, 231);
+  margin: 10px;
   padding: 3px;
-  margin: 5px;
+  border: 2px grey;
+  border-style: none dotted dotted dotted;
 }
 
-@media screen and (max-width: 715px) {
-  .navigation-items {
+@media screen and (max-width: 1142px) {
+  ul.nav-items {
     display: none;
+  }
+
+  .menu-icon {
+    border: 2px dotted grey;
+    margin-bottom: 5px;
+    justify-self: end;
+  }
+
+  .icon-bar {
+    width: 30px;
+    height: 2px;
+    margin: 10px;
+    background-color: black;
   }
 }
