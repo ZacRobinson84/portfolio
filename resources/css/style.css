@@ -1,3 +1,7 @@
+body {
+  font-size: 16px;
+}
+
 /* Navigation Bar */
 
 nav {
@@ -17,6 +21,7 @@ h1.logo {
   display: inline;
   margin: 5px 10px 0 10px;
   justify-self: start;
+  white-space: nowrap;
 }
 
 ul.nav-items {
@@ -36,14 +41,26 @@ li.nav-item {
   border-style: none dotted dotted dotted;
 }
 
-@media screen and (max-width: 1142px) {
+/*Smaller screen navbar */
+
+@media screen and (max-width: 1180px) {
+  nav {
+    height: 100px;
+    grid-template-columns: 80% auto;
+  }
+
+  h1.logo {
+    font-size: 2rem;
+  }
+
   ul.nav-items {
     display: none;
   }
 
   .menu-icon {
+    background-color: rgb(231, 231, 231);
     border: 2px dotted grey;
-    margin-bottom: 5px;
+    margin: 0 5px 5px 0;
     justify-self: end;
   }
 
@@ -53,4 +70,17 @@ li.nav-item {
     margin: 10px;
     background-color: black;
   }
+}
+
+@media screen and (max-width: 650px) {
+  nav {
+    width: 100%;
+  }
+}
+
+/* Dropdown nav menu */
+
+ul.nav-items.responsive {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
 }
