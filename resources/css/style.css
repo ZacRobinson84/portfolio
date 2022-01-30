@@ -167,7 +167,7 @@ ul.nav-items.responsive .contact {
 
 @media screen and (max-width: 650px) {
   ul.nav-items.responsive {
-    width: 80%;
+    width: 60%;
   }
 }
 
@@ -178,6 +178,8 @@ section.about-me {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px;
   width: 60%;
+  border: 1px black;
+  border-style: dashed;
 
   margin: auto;
 }
@@ -189,7 +191,7 @@ section.about-me p {
   font-size: 1.75rem;
 
   padding: 25px;
-  margin: 0;
+  margin: 15px;
 }
 
 section.about-me > img {
@@ -214,8 +216,6 @@ section.about-me > img {
 @media screen and (max-width: 859px) {
   section.about-me p {
     font-size: 1.4rem;
-  }
-  section.about-me > p {
     height: 50%;
   }
 }
@@ -232,6 +232,7 @@ section.about-me > img {
   section.about-me {
     grid-template-columns: 60% 40%;
     width: 100%;
+    height: 350px;
   }
   section.about-me > img {
     width: 85%;
