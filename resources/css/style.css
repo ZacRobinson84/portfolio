@@ -62,9 +62,13 @@ a {
   text-decoration: none;
 }
 
+ul.nav-items span {
+  display: none;
+}
+
 /*Smaller screen navbar */
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1280px) {
   nav {
     width: 80%;
     height: 100px;
@@ -124,7 +128,11 @@ ul.nav-items.responsive {
   z-index: 2;
 }
 
-@media screen and (min-width: 1181px) {
+ul.nav-items.responsive a {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 1281px) {
   ul.nav-items.responsive {
     display: none;
   }
@@ -137,6 +145,8 @@ ul.nav-items.responsive {
 ul.nav-items.responsive li.nav-item {
   display: block;
   grid-column: 2 / 3;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: bold;
   background-color: white;
   margin: 0;
   padding: 5px;
@@ -159,11 +169,7 @@ ul.nav-items.responsive .contact {
 
 ul.nav-items.responsive span {
   display: none;
-  color: white;
-  background-color: black;
-  padding: 0 10px;
-  border-radius: 10px;
-  float: right;
+  color: rgb(255, 158, 158);
 }
 
 ul.nav-items.responsive li:hover span {
@@ -180,8 +186,8 @@ ul.nav-items.responsive li:hover span {
 
 section.about-me {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr 1fr;
   width: 60%;
   border: 1px black;
   border-style: dashed;
@@ -194,12 +200,11 @@ section.about-me p {
   background-color: rgb(255, 237, 176);
   font-family: "Shadows Into Light", cursive;
   font-size: 1.75rem;
-
   padding: 25px;
   margin: 15px;
 }
 
-section.about-me > img {
+section.about-me img.photo {
   position: relative;
   grid-column: 2 / 3;
   width: 70%;
@@ -212,16 +217,33 @@ section.about-me > img {
   z-index: 1;
 }
 
-@media screen and (max-width: 1180px) {
+section.about-me img.photo#graffiti {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  transform: rotate(-6deg);
+  margin-left: 27px;
+}
+
+section.about-me img.cartoon {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  justify-self: right;
+  opacity: 65%;
+  width: 70%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
   section.about-me {
-    width: 80%;
+    width: 90%;
   }
 }
 
 @media screen and (max-width: 859px) {
   section.about-me p {
     font-size: 1.4rem;
-    height: 50%;
+    height: 70%;
   }
 }
 
@@ -239,7 +261,7 @@ section.about-me > img {
     width: 100%;
     height: 350px;
   }
-  section.about-me > img {
+  section.about-me > img.photo {
     width: 85%;
     transform: rotate(4deg);
   }
