@@ -121,7 +121,7 @@ ul.nav-items.responsive {
   width: 30%;
   font-size: 1.5rem;
   text-align: center;
-  box-shadow: 5px 10px 20px -5px rgb(194, 194, 194);
+  box-shadow: 5px 10px 20px -5px rgb(0, 0, 0);
   white-space: normal;
   border: 1px grey;
   border-style: none solid solid solid;
@@ -170,25 +170,61 @@ ul.nav-items.responsive li.nav-item#contact {
 
 section.about-me {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px;
+  width: 60%;
+  margin: auto;
 }
 
 section.about-me p {
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
   background-color: rgb(255, 237, 176);
   font-family: "Shadows Into Light", cursive;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding: 25px;
+  margin: 0;
 }
 
 section.about-me > img {
   position: relative;
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   width: 100%;
-  min-height: 100%;
+  max-height: 100%;
   object-fit: cover;
   transform: rotate(7deg);
   border: solid rgb(126, 126, 126);
   border-width: 8px 8px 50px 8px;
   z-index: -1;
+}
+
+@media screen and (max-width: 1180px) {
+  section.about-me {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 859px) {
+  section.about-me p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    margin-bottom: 15px;
+  }
+  section.about-me {
+    grid-template-columns: 60% 40%;
+    width: 100%;
+  }
+  section.about-me > img {
+    width: 85%;
+    transform: rotate(4deg);
+  }
+}
+
+@media screen and (max-width: 501px) {
+  section.about-me p {
+    font-size: 1.3rem;
+  }
 }
