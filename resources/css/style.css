@@ -1,5 +1,7 @@
 body {
   font-size: 16px;
+  box-sizing: border-box;
+  margin: 5px;
 }
 
 /* Navigation Bar */
@@ -111,7 +113,9 @@ a {
 }
 
 ul.nav-items.responsive {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(4, 1fr);
   position: absolute;
   top: 151px;
   width: 30%;
@@ -121,6 +125,7 @@ ul.nav-items.responsive {
   white-space: normal;
   border: 1px grey;
   border-style: none solid solid solid;
+  background-color: white;
   animation: fadeIn 300ms ease-in-out forwards;
 }
 
@@ -129,17 +134,26 @@ ul.nav-items.responsive {
     display: none;
   }
 
-  ul.nav-items.responsive {
+  ul.nav-items .white-space {
+    display: none;
   }
 }
 
 ul.nav-items.responsive li.nav-item {
   display: block;
-  background-color: rgb(255, 237, 176);
+  grid-column: 2 / 3;
+  background-color: white;
   margin: 0;
   padding: 5px;
   z-index: 1;
+  border-style: none none dotted solid;
+  border-color: lightblue rgb(255, 158, 158);
+}
+
+ul.nav-items.responsive .white-space {
+  border: 1px;
   border-style: none none dotted none;
+  border-color: lightblue;
 }
 
 ul.nav-items.responsive li.nav-item#contact {
@@ -155,10 +169,26 @@ ul.nav-items.responsive li.nav-item#contact {
 /* About me section */
 
 section.about-me {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 section.about-me p {
+  grid-column: 2 / 3;
+  background-color: rgb(255, 237, 176);
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2rem;
+  padding: 25px;
 }
 
 section.about-me > img {
+  position: relative;
+  grid-column: 3 / 4;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: rotate(7deg);
+  border: solid rgb(126, 126, 126);
+  border-width: 8px 8px 50px 8px;
+  z-index: -1;
 }
