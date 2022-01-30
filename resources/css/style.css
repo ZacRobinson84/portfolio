@@ -51,7 +51,7 @@ li.nav-item {
 }
 
 li.nav-item:hover {
-  background-color: white;
+  background: white;
   border: 1px;
   border-color: grey grey grey grey;
   border-style: solid solid solid solid;
@@ -95,12 +95,6 @@ a {
   }
 }
 
-@media screen and (max-width: 650px) {
-  nav {
-    width: 100%;
-  }
-}
-
 /* Dropdown nav menu */
 
 @keyframes fadeIn {
@@ -127,6 +121,7 @@ ul.nav-items.responsive {
   border-style: none solid solid solid;
   background-color: white;
   animation: fadeIn 300ms ease-in-out forwards;
+  z-index: 2;
 }
 
 @media screen and (min-width: 1181px) {
@@ -156,8 +151,18 @@ ul.nav-items.responsive .white-space {
   border-color: lightblue;
 }
 
-ul.nav-items.responsive li.nav-item#contact {
-  border-style: none;
+ul.nav-items.responsive li.contact,
+ul.nav-items.responsive .contact {
+  border-style: none none none solid;
+}
+
+#drop-item:hover {
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    transparent,
+    rgb(198, 232, 243)
+  );
 }
 
 @media screen and (max-width: 650px) {
@@ -173,6 +178,7 @@ section.about-me {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px;
   width: 60%;
+
   margin: auto;
 }
 
@@ -181,6 +187,7 @@ section.about-me p {
   background-color: rgb(255, 237, 176);
   font-family: "Shadows Into Light", cursive;
   font-size: 1.75rem;
+
   padding: 25px;
   margin: 0;
 }
@@ -192,9 +199,10 @@ section.about-me > img {
   max-height: 100%;
   object-fit: cover;
   transform: rotate(7deg);
-  border: solid rgb(126, 126, 126);
+  border: solid white;
   border-width: 8px 8px 50px 8px;
-  z-index: -1;
+  box-shadow: -5px 5px 15px -5px;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1180px) {
@@ -207,11 +215,19 @@ section.about-me > img {
   section.about-me p {
     font-size: 1.4rem;
   }
+  section.about-me > p {
+    height: 50%;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   nav {
+    width: 100%;
+    margin-top: 0;
     margin-bottom: 15px;
+  }
+  ul.nav-items.responsive {
+    top: 106px;
   }
   section.about-me {
     grid-template-columns: 60% 40%;
