@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Rock+Salt&family=Shadows+Into+Light&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Rock+Salt&family=Shadows+Into+Light&family=Sriracha&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -44,7 +44,11 @@
     </header>
     <main>
       <section class="about-me">
-        <p><b>To do:</b><br />- study coding<br />- eat some pizza</p>
+        <p>
+          Hi, I'm <span id="highlight">Zac</span>.<br />I'm a
+          <span id="highlight">Front End Web Developer</span> living in
+          <span id="highlight">Toronto</span>.
+        </p>
         <img
           class="photo"
           src="./resources/images/portfolio_photo.jpg"
@@ -55,6 +59,7 @@
           src="./resources/images/matr_graffiti.jpg"
           alt="graffii mural"
           id="graffiti"
+          onclick="rotatePic()"
         />
         <img
           class="cartoon"
@@ -62,7 +67,12 @@
           alt="cartoon character"
         />
       </section>
-      <section class="skills"></section>
+      <section class="skills">
+        <p>
+          I love to learn and create. I'm currently very excited about HTML,
+          CSS, and Javascript.
+        </p>
+      </section>
     </main>
     <script src="./resources/javascript/portfolio_script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

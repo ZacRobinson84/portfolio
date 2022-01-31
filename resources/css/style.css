@@ -5,18 +5,23 @@ body {
 }
 
 /* Navigation Bar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
 
 nav {
   font-family: "Mochiy Pop P One", sans-serif;
-  background-color: lightgrey;
+  background-color: rgb(228, 143, 143);
   display: grid;
   grid-template-columns: 45% 55%;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   align-items: end;
-  width: 55%;
-  margin: 50px auto;
-  border: 1px grey;
+  width: 60%;
+  margin: 0 auto 15px auto;
+  border: 2px rgb(170, 105, 105);
   border-style: solid solid none solid;
   border-radius: 3px;
 }
@@ -43,18 +48,17 @@ ul.nav-items {
 li.nav-item {
   display: inline;
   position: relative;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(255, 255, 255);
   margin: 10px;
   padding: 3px;
-  border: 1px grey;
-  border-style: none dotted dotted dotted;
+  border: 2px solid black;
+  border-radius: 3px;
 }
 
 li.nav-item:hover {
-  background: white;
-  border: 1px;
-  border-color: grey grey grey grey;
-  border-style: solid solid solid solid;
+  background-color: rgb(170, 105, 105);
+  border: 2px solid black;
+  color: white;
 }
 
 a {
@@ -70,7 +74,7 @@ ul.nav-items span {
 
 @media screen and (max-width: 1280px) {
   nav {
-    width: 80%;
+    width: 90%;
     height: 100px;
   }
 
@@ -111,11 +115,12 @@ ul.nav-items span {
 }
 
 ul.nav-items.responsive {
+  position: sticky;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: repeat(4, 1fr);
   position: absolute;
-  top: 151px;
+  top: 101px;
   width: 30%;
   font-size: 1.5rem;
   text-align: center;
@@ -176,32 +181,31 @@ ul.nav-items.responsive li:hover span {
   display: inline;
 }
 
-@media screen and (max-width: 650px) {
-  ul.nav-items.responsive {
-    width: 60%;
-  }
-}
-
-/* About me section */
+/* About Me Section */
 
 section.about-me {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 1fr 1fr;
   width: 60%;
-  border: 1px black;
-  border-style: dashed;
-
   margin: auto;
 }
 
 section.about-me p {
   grid-column: 1 / 2;
   background-color: rgb(255, 237, 176);
-  font-family: "Shadows Into Light", cursive;
-  font-size: 1.75rem;
-  padding: 25px;
+  font-family: "Sriracha", cursive;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 30px;
   margin: 15px;
+  box-shadow: 20px 20px rgb(224, 186, 115);
+}
+
+#highlight {
+  background-color: rgb(255, 247, 221);
+  border-radius: 3px;
 }
 
 section.about-me img.photo {
@@ -228,11 +232,27 @@ section.about-me img.cartoon {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   justify-self: right;
-  opacity: 65%;
+  opacity: 25%;
   width: 70%;
   max-height: 100%;
   object-fit: cover;
 }
+
+/* Skills Section */
+
+.skills p {
+  width: 70%;
+  background-color: rgb(176, 252, 255);
+  font-family: "Sriracha", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 30px;
+  margin: 0 auto 30px auto;
+  box-shadow: 20px 20px rgb(135, 194, 196);
+}
+
+/* Media Queries */
 
 @media screen and (max-width: 1280px) {
   section.about-me {
@@ -242,24 +262,20 @@ section.about-me img.cartoon {
 
 @media screen and (max-width: 859px) {
   section.about-me p {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     height: 70%;
   }
-}
-
-@media screen and (max-width: 650px) {
   nav {
     width: 100%;
     margin-top: 0;
     margin-bottom: 15px;
   }
   ul.nav-items.responsive {
-    top: 106px;
+    width: 300px;
   }
   section.about-me {
     grid-template-columns: 60% 40%;
     width: 100%;
-    height: 350px;
   }
   section.about-me > img.photo {
     width: 85%;
@@ -267,8 +283,15 @@ section.about-me img.cartoon {
   }
 }
 
+@media screen and (max-width: 681px) {
+  section.about-me p {
+    font-size: 1.8rem;
+  }
+}
+
 @media screen and (max-width: 501px) {
   section.about-me p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    padding: 10px;
   }
 }
