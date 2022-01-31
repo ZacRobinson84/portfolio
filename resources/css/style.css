@@ -210,7 +210,7 @@ section.about-me p#yellow-background {
   grid-column: 1 / 2;
   background-color: rgb(255, 237, 176);
   font-family: "Sriracha", cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   text-align: left;
   padding: 30px;
@@ -224,7 +224,7 @@ section.about-me p#blue-background {
   width: 70%;
   background-color: rgb(176, 252, 255);
   font-family: "Sriracha", cursive;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   text-align: left;
   padding: 30px;
@@ -277,14 +277,31 @@ section.about-me img.photo#graffiti-two {
 
 /* Media Queries */
 
+@media screen and (max-width: 1900px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 3rem;
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 2.5rem;
+    height: 70%;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   section.about-me {
-    width: 90%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 859px) {
-  section.about-me p#yellow-background {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
     font-size: 2.5rem;
     height: 70%;
   }
@@ -344,7 +361,7 @@ section.about-me img.photo#graffiti-two {
   }
 }
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 443px) {
   section.about-me p#yellow-background,
   section.about-me p#blue-background {
     font-size: 1.4rem;
