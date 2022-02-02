@@ -102,7 +102,7 @@ ul.nav-items span {
   }
 
   .icon-bar {
-    width: 31px;
+    width: 34px;
     height: 2px;
     margin: 10px;
     background-color: black;
@@ -110,12 +110,42 @@ ul.nav-items span {
 
   /* Dropdown nav menu */
 
-  .menu-icon.responsive .icon-bar {
-    display: none;
+  @keyframes rotateOne {
+    0% {
+      transform: rotate(0) translate(0);
+    }
+    100% {
+      transform: rotate(45deg) translate(8px, 9px);
+    }
+  }
+
+  @keyframes rotateTwo {
+    0% {
+      transform: rotate(0) translate(0);
+    }
+    100% {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+  }
+
+  .responsive #top-icon-bar {
+    display: absolute;
+
+    animation: rotateOne 600ms ease forwards;
+  }
+
+  .responsive #middle-icon-bar {
+    visibility: hidden;
+  }
+
+  .responsive #bottom-icon-bar {
+    display: absolute;
+
+    animation: rotateTwo 600ms ease forwards;
   }
 
   .menu-icon.responsive p {
-    display: block;
+    display: none;
   }
 
   ul.nav-items {
@@ -138,6 +168,7 @@ ul.nav-items span {
   }
 
   ul.nav-items a {
+    padding-left: 10px;
   }
 
   ul.nav-items li.nav-item {
