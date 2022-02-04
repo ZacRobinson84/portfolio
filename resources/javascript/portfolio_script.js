@@ -9,9 +9,11 @@ function dropMenu() {
     x.className = "nav-items enter";
   }
   if (y.className === "menu-icon") {
-    y.className += " responsive";
+    y.className += " animate-forward";
+  } else if (y.className === "menu-icon animate-forward") {
+    y.className = "menu-icon animate-backward";
   } else {
-    y.className = "menu-icon";
+    y.className = "menu-icon animate-forward";
   }
 }
 

@@ -110,44 +110,6 @@ ul.nav-items span {
 
   /* Dropdown nav menu */
 
-  @keyframes rotateOne {
-    0% {
-      transform: rotate(0) translate(0);
-    }
-    100% {
-      transform: rotate(45deg) translate(8px, 9px);
-    }
-  }
-
-  @keyframes rotateTwo {
-    0% {
-      transform: rotate(0) translate(0);
-    }
-    100% {
-      transform: rotate(-45deg) translate(8px, -8px);
-    }
-  }
-
-  .responsive #top-icon-bar {
-    display: absolute;
-
-    animation: rotateOne 600ms ease forwards;
-  }
-
-  .responsive #middle-icon-bar {
-    visibility: hidden;
-  }
-
-  .responsive #bottom-icon-bar {
-    display: absolute;
-
-    animation: rotateTwo 600ms ease forwards;
-  }
-
-  .menu-icon.responsive p {
-    display: none;
-  }
-
   ul.nav-items {
     visibility: hidden;
     position: fixed;
@@ -212,7 +174,7 @@ ul.nav-items span {
     display: inline;
   }
 
-  /*Dropmenu slide inslide out animation */
+  /*Dropmenu slide in slide out animation */
 
   @keyframes slideIn {
     0% {
@@ -234,12 +196,104 @@ ul.nav-items span {
 
   ul.nav-items.enter {
     visibility: visible;
-    animation: slideIn 400ms ease forwards;
+    animation: slideIn 600ms ease forwards;
   }
 
   ul.nav-items.exit {
     visibility: visible;
-    animation: slideOut 400ms ease forwards;
+    animation: slideOut 600ms ease forwards;
+  }
+
+  /*Dropmenu open close menu icon animation*/
+
+  @keyframes topBarForward {
+    0% {
+      transform: rotate(0) translate(0);
+    }
+    20% {
+      transform: rotate(0) translate(0);
+    }
+    100% {
+      transform: rotate(45deg) translate(8px, 9px);
+    }
+  }
+
+  @keyframes middleBarForward {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes bottomBarForward {
+    0% {
+      transform: rotate(0) translate(0);
+    }
+    20% {
+      transform: rotate(0) translate(0);
+    }
+    100% {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+  }
+
+  @keyframes topBarBackward {
+    0% {
+      transform: rotate(45deg) translate(8px, 9px);
+    }
+    80% {
+      transform: rotate(0) translate(0);
+    }
+    100% {
+      transform: rotate(0) translate(0);
+    }
+  }
+
+  @keyframes middleBarBackward {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @keyframes bottomBarBackward {
+    0% {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+    80% {
+      transform: rotate(0) translate(0);
+    }
+    100% {
+      transform: rotate(0) translate(0);
+    }
+  }
+
+  .animate-forward #top-icon-bar {
+    animation: topBarForward 450ms ease forwards;
+  }
+
+  .animate-forward #middle-icon-bar {
+    animation: middleBarForward 300ms ease forwards;
+  }
+
+  .animate-forward #bottom-icon-bar {
+    animation: bottomBarForward 450ms ease forwards;
+  }
+
+  .animate-backward #top-icon-bar {
+    animation: topBarBackward 450ms ease forwards;
+  }
+
+  .animate-backward #middle-icon-bar {
+    animation: middleBarBackward 300ms ease forwards;
+  }
+
+  .animate-backward #bottom-icon-bar {
+    animation: bottomBarBackward 450ms ease forwards;
   }
 }
 
