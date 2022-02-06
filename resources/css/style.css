@@ -17,7 +17,7 @@ nav {
   background-color: rgb(228, 143, 143);
   display: block;
   width: 100%;
-  height: 40px;
+  height: 45px;
   margin: 0 auto 15px auto;
   border: 4px rgb(143, 88, 88);
   border-style: none none solid none;
@@ -79,7 +79,7 @@ ul.nav-items span {
 @media screen and (max-width: 1280px) {
   nav {
     width: 100%;
-    height: 99px;
+    height: 78px;
   }
 
   h1.logo {
@@ -106,6 +106,7 @@ ul.nav-items span {
     height: 2px;
     margin: 10px;
     background-color: black;
+    border-radius: 30%;
   }
 
   /* Dropdown nav menu */
@@ -116,7 +117,7 @@ ul.nav-items span {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: repeat(4, 1fr);
-    top: 97px;
+    top: 76px;
     right: -1px;
     z-index: 1;
     width: 30%;
@@ -129,10 +130,6 @@ ul.nav-items span {
     box-shadow: 0px 5px rgb(141, 141, 141);
   }
 
-  ul.nav-items a {
-    padding-left: 10px;
-  }
-
   ul.nav-items li.nav-item {
     display: block;
     grid-column: 2 / 3;
@@ -141,7 +138,7 @@ ul.nav-items span {
     color: black;
     background-color: white;
     margin: 0;
-    padding: 5px;
+    padding: 5px 15px;
     z-index: 1;
     border: 1px;
     border-style: none none dotted solid;
@@ -201,6 +198,7 @@ section.about-me p#blue-background {
   grid-column: 1 / 3;
   grid-row: 3 / 4;
   width: 70%;
+  align-self: center;
   background-color: rgb(176, 252, 255);
   font-family: "Sriracha", cursive;
   font-size: 4rem;
@@ -253,233 +251,231 @@ section.about-me img.photo#graffiti-two {
   transform: rotate(-3deg);
 }
 
-  /* Skills Section */
+/* Skills Section */
 
-  /* Media Queries */
+/* Media Queries */
 
-  @media screen and (max-width: 1900px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 3rem;
-      height: 70%;
-    }
+@media screen and (max-width: 1900px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 3rem;
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 2.5rem;
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  section.about-me {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 859px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 2.5rem;
+    height: 70%;
+  }
+  nav {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  ul.nav-items {
+    width: 300px;
+  }
+  section.about-me {
+    width: 100%;
+  }
+  section.about-me > img.photo {
+    width: 85%;
+    transform: rotate(4deg);
+  }
+}
+
+@media screen and (max-width: 692px) {
+  section.about-me {
+    grid-template-rows: repeat(4, 1fr);
   }
 
-  @media screen and (max-width: 1700px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 2.5rem;
-      height: 70%;
-    }
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 2.2rem;
   }
 
-  @media screen and (max-width: 1280px) {
-    section.about-me {
-      width: 80%;
-    }
+  section.about-me img.photo#graffiti-two {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    width: 80%;
+    align-self: start;
+    justify-self: center;
+    transform: rotate(4deg);
   }
+}
 
-  @media screen and (max-width: 859px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 2.5rem;
-      height: 70%;
-    }
-    nav {
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-    ul.nav-items {
-      width: 300px;
-    }
-    section.about-me {
-      grid-template-columns: 60% 40%;
-      width: 100%;
-    }
-    section.about-me > img.photo {
-      width: 85%;
-      transform: rotate(4deg);
-    }
+@media screen and (max-width: 599px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 2rem;
   }
+}
 
-  @media screen and (max-width: 692px) {
-    section.about-me {
-      grid-template-rows: repeat(4, 1fr);
-    }
-
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 2.2rem;
-    }
-
-    section.about-me img.photo#graffiti-two {
-      grid-column: 1 / 3;
-      grid-row: 4 / 5;
-      width: 80%;
-      align-self: start;
-      justify-self: center;
-      transform: rotate(4deg);
-    }
+@media screen and (max-width: 560px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 1.8rem;
   }
+}
 
-  @media screen and (max-width: 599px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 2rem;
-    }
+@media screen and (max-width: 501px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 1.6rem;
+    padding: 10px;
   }
+}
 
-  @media screen and (max-width: 560px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 1.8rem;
-    }
+@media screen and (max-width: 443px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 1.4rem;
   }
+}
 
-  @media screen and (max-width: 501px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 1.6rem;
-      padding: 10px;
-    }
+@media screen and (max-width: 388px) {
+  section.about-me p#yellow-background,
+  section.about-me p#blue-background {
+    font-size: 1.2rem;
   }
+}
 
-  @media screen and (max-width: 443px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 1.4rem;
-    }
+/* -------- ANIMATIONS ---------- */
+
+/*Dropmenu slide in slide out animation */
+
+@keyframes slideIn {
+  0% {
+    transform: translate(400px, 0);
   }
-
-  @media screen and (max-width: 388px) {
-    section.about-me p#yellow-background,
-    section.about-me p#blue-background {
-      font-size: 1.2rem;
-    }
+  100% {
+    transform: translate(0);
   }
+}
 
-  /* -------- ANIMATIONS ---------- */
-
-  /*Dropmenu slide in slide out animation */
-
-  @keyframes slideIn {
-    0% {
-      transform: translate(400px, 0);
-    }
-    100% {
-      transform: translate(0);
-    }
+@keyframes slideOut {
+  0% {
+    transform: translate(0);
   }
-
-  @keyframes slideOut {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translate(400px, 0);
-    }
+  100% {
+    transform: translate(400px, 0);
   }
+}
 
-  ul.nav-items.enter {
-    visibility: visible;
-    animation: slideIn 600ms ease forwards;
+ul.nav-items.enter {
+  visibility: visible;
+  animation: slideIn 600ms ease forwards;
+}
+
+ul.nav-items.exit {
+  visibility: visible;
+  animation: slideOut 600ms ease forwards;
+}
+
+/*Dropmenu open close menu icon animation*/
+
+@keyframes topBarForward {
+  0% {
+    transform: rotate(0) translate(0);
   }
-
-  ul.nav-items.exit {
-    visibility: visible;
-    animation: slideOut 600ms ease forwards;
+  20% {
+    transform: rotate(0) translate(0);
   }
-
-  /*Dropmenu open close menu icon animation*/
-
-  @keyframes topBarForward {
-    0% {
-      transform: rotate(0) translate(0);
-    }
-    20% {
-      transform: rotate(0) translate(0);
-    }
-    100% {
-      transform: rotate(45deg) translate(8px, 9px);
-    }
+  100% {
+    transform: rotate(45deg) translate(8px, 9px);
   }
+}
 
-  @keyframes middleBarForward {
-    0% {
-      opacity: 100%;
-    }
-    100% {
-      opacity: 0;
-    }
+@keyframes middleBarForward {
+  0% {
+    opacity: 100%;
   }
+  100% {
+    opacity: 0;
+  }
+}
 
-  @keyframes bottomBarForward {
-    0% {
-      transform: rotate(0) translate(0);
-    }
-    20% {
-      transform: rotate(0) translate(0);
-    }
-    100% {
-      transform: rotate(-45deg) translate(8px, -8px);
-    }
+@keyframes bottomBarForward {
+  0% {
+    transform: rotate(0) translate(0);
   }
+  20% {
+    transform: rotate(0) translate(0);
+  }
+  100% {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+}
 
-  @keyframes topBarBackward {
-    0% {
-      transform: rotate(45deg) translate(8px, 9px);
-    }
-    80% {
-      transform: rotate(0) translate(0);
-    }
-    100% {
-      transform: rotate(0) translate(0);
-    }
+@keyframes topBarBackward {
+  0% {
+    transform: rotate(45deg) translate(8px, 9px);
   }
+  80% {
+    transform: rotate(0) translate(0);
+  }
+  100% {
+    transform: rotate(0) translate(0);
+  }
+}
 
-  @keyframes middleBarBackward {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 100%;
-    }
+@keyframes middleBarBackward {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 100%;
+  }
+}
 
-  @keyframes bottomBarBackward {
-    0% {
-      transform: rotate(-45deg) translate(8px, -8px);
-    }
-    80% {
-      transform: rotate(0) translate(0);
-    }
-    100% {
-      transform: rotate(0) translate(0);
-    }
+@keyframes bottomBarBackward {
+  0% {
+    transform: rotate(-45deg) translate(8px, -8px);
   }
+  80% {
+    transform: rotate(0) translate(0);
+  }
+  100% {
+    transform: rotate(0) translate(0);
+  }
+}
 
-  .animate-forward #top-icon-bar {
-    animation: topBarForward 450ms ease forwards;
-  }
+.animate-forward #top-icon-bar {
+  animation: topBarForward 450ms ease forwards;
+}
 
-  .animate-forward #middle-icon-bar {
-    animation: middleBarForward 300ms ease forwards;
-  }
+.animate-forward #middle-icon-bar {
+  animation: middleBarForward 300ms ease forwards;
+}
 
-  .animate-forward #bottom-icon-bar {
-    animation: bottomBarForward 450ms ease forwards;
-  }
+.animate-forward #bottom-icon-bar {
+  animation: bottomBarForward 450ms ease forwards;
+}
 
-  .animate-backward #top-icon-bar {
-    animation: topBarBackward 450ms ease forwards;
-  }
+.animate-backward #top-icon-bar {
+  animation: topBarBackward 450ms ease forwards;
+}
 
-  .animate-backward #middle-icon-bar {
-    animation: middleBarBackward 300ms ease forwards;
-  }
+.animate-backward #middle-icon-bar {
+  animation: middleBarBackward 300ms ease forwards;
+}
 
-  .animate-backward #bottom-icon-bar {
-    animation: bottomBarBackward 450ms ease forwards;
-  }
+.animate-backward #bottom-icon-bar {
+  animation: bottomBarBackward 450ms ease forwards;
 }
